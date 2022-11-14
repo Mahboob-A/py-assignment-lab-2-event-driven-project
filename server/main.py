@@ -125,8 +125,9 @@ while True:
                                 except FileNotFoundError:
                                         print(f"As directory not found Py script {prefix_name+'.'+postfix_name } is deleted\n")
                                         remove(copied_py_in_server)
-                                except Exception:
-                                        print(f"Py script {prefix_name+'.'+postfix_name } has error in it. It did not run in shell\n")
+                                except Exception as e:
+                                        print(f"Py script {prefix_name+'.'+postfix_name } has below error: ")
+                                        print(e, '\n')
                                 # deleting the temp folder to hold the py file 
                                 shutil.rmtree('./storePy')
                  

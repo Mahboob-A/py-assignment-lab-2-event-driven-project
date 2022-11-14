@@ -122,9 +122,6 @@ while True:
                                                 print(f"Py script {prefix_name+'.'+postfix_name } is running")
                                                 exec(script)
                                                 print(f"Py script {prefix_name+'.'+postfix_name } excution ended\n")
-                                except FileNotFoundError:
-                                        print(f"As directory not found Py script {prefix_name+'.'+postfix_name } is deleted\n")
-                                        remove(copied_py_in_server)
                                 except Exception as e:
                                         print(f"Py script {prefix_name+'.'+postfix_name } has below error: ")
                                         print(e, '\n')
